@@ -17,3 +17,42 @@ em,i{font-style:normal}
 
 /* Motion remains a progressive enhancement: no content is hidden by default. */
 .hero-line-mask{display:block;overflow:clip;padding-bottom:.13em;margin-bottom:-.13em}.hero-line-inner{display:block}.reading-progress{position:fixed;top:0;left:0;width:100%;height:3px;background:var(--red);z-index:50;transform:scaleX(0);transform-origin:left;pointer-events:none}.text-link,.event-read{position:relative;transition:color .2s,border-color .2s}.text-link:after,.event-read:after{content:'';height:1px;position:absolute;left:0;right:0;bottom:-1px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}.text-link:hover:after,.text-link:focus-visible:after,.project-open:hover .event-read:after{transform:scaleX(1)}.filters button{transition:color .2s,border-color .2s,background .2s}.filters button:hover{color:var(--red)}#copy-email{transition:background .2s,color .2s,transform .15s}#copy-email:hover{background:var(--paper);color:var(--red)}#copy-email:active{transform:scale(.96)}#close-dialog b{transition:transform .25s}#close-dialog:hover b{transform:rotate(90deg)}.project-meta h3{transition:color .2s}.project-open:hover .project-meta h3{color:var(--red)}@media(prefers-reduced-motion:reduce){.reading-progress{display:none}.project-open:hover .event-cover img,.round-link:hover{transform:none}}
+
+/* Allow editorial content to shrink within narrow grid tracks. */
+.work-grid,.events-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.project,.project-open,.events-grid>article,.hero-copy,.about-copy,.about-aside{min-width:0}.project-art{container-type:inline-size}.project-meta{gap:12px}.project-meta>span{flex-shrink:0}.project-open>p{overflow-wrap:break-word}
+@media(max-width:760px){
+ .work-grid,.events-grid{grid-template-columns:minmax(0,1fr)}
+ .hero{grid-template-columns:minmax(0,1fr)}
+ .section-heading>div,.intro>div,.about-details>div,.method-steps>div{min-width:0}
+ .project-art{padding:22px;height:320px}
+ .sleep-word{font-size:clamp(42px,22cqw,76px);letter-spacing:-.065em}
+ .therapy-title{font-size:clamp(40px,18cqw,65px);letter-spacing:-.055em;margin-top:65px}
+ .therapy-title em{padding-left:8cqw}
+ .therapy-stamp{width:clamp(60px,23cqw,95px);height:clamp(60px,23cqw,95px);font-size:clamp(32px,13cqw,50px);right:18px;top:79px}
+ .therapy-stamp small{font-size:clamp(5px,1.7cqw,7px);letter-spacing:.4px}
+ .stitch-title{font-size:clamp(43px,21cqw,72px);padding-left:0;letter-spacing:-.06em}
+ .stitch-title em{margin-left:10cqw}
+ .stitch-title>span{font-size:7px;letter-spacing:1.2px}
+ .aiesec-title,.tony-title{font-size:clamp(36px,17cqw,53px);letter-spacing:-.045em}
+ .research-title{font-size:clamp(35px,17cqw,52px);letter-spacing:-.05em;margin-left:0}
+ .research-title span:nth-child(2){padding-left:7cqw}
+ .research-title span:nth-child(3){padding-left:14cqw}
+ .tony-flow{gap:12px;font-size:8px;letter-spacing:.5px;flex-wrap:wrap}
+ .art-label{left:22px;font-size:8px;letter-spacing:1px}
+ .art-foot{left:22px;right:22px;max-width:none;font-size:7px;letter-spacing:.6px}
+ .project-meta h3{font-size:18px}
+ .project-tags{font-size:7px;letter-spacing:.8px}
+ .project-open>p{font-size:13px}
+ .filters{flex-wrap:wrap;gap:0 18px;overflow:visible;white-space:normal}
+ .filters button{flex-shrink:0;min-height:42px}
+ .about-details{grid-template-columns:minmax(0,1fr) minmax(0,1.3fr)}
+ .events-grid .project-meta{flex-wrap:wrap;gap:6px}
+ .contact-links>a:first-child{overflow-wrap:anywhere}
+}
+@media(max-width:360px){
+ .header nav{gap:14px}.header nav>a{font-size:10px}.header .wordmark{font-size:19px}
+ h1{font-size:29vw;letter-spacing:-.065em}h1 em{letter-spacing:-.065em}
+ .hero-bottom{gap:12px}.hero-bottom p{font-size:13px}.round-link{width:76px;height:76px}
+ .contact-links>button{margin-left:0}.about-details{grid-template-columns:minmax(0,1fr)}
+ .events-grid .project-meta h3{font-size:16px}
+}
