@@ -56,3 +56,4 @@ em,i{font-style:normal}
  .contact-links>button{margin-left:0}.about-details{grid-template-columns:minmax(0,1fr)}
  .events-grid .project-meta h3{font-size:16px}
 }
+@media(max-width:760px){.aiesec-title,.tony-title{font-size:clamp(29px,13.5cqw,48px)}.places{margin-top:22px}.tony-flow{margin-top:26px}.research-title{font-size:clamp(32px,15.5cqw,48px)}}
