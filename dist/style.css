@@ -154,3 +154,7 @@ section.about{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(40p
 section.resource{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(40px,6vw,96px)}
 .resource-copy>p{max-width:none}
 @media(max-width:760px){section.resource{grid-template-columns:minmax(0,1fr);gap:35px}}
+
+/* Let intro copy use its full column, with consistent outer gutters. */
+section.intro>div{max-width:none}
+section.intro p{max-width:none}
