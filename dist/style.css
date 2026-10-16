@@ -149,3 +149,8 @@ main > section.section-pad{padding-top:125px;padding-bottom:125px}
 section.about{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(40px,6vw,96px);align-items:start}
 .about-copy>p{max-width:none}
 @media(max-width:760px){section.about{grid-template-columns:minmax(0,1fr);gap:35px}}
+
+/* Give the book and its description balanced columns. */
+section.resource{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(40px,6vw,96px)}
+.resource-copy>p{max-width:none}
+@media(max-width:760px){section.resource{grid-template-columns:minmax(0,1fr);gap:35px}}
