@@ -144,3 +144,8 @@ main > section.section-pad{padding-top:125px;padding-bottom:125px}
 .lucide-icon{display:inline-block;width:18px;height:18px;flex:none;vertical-align:middle;stroke-width:1.75}
 .text-link,.header .nav-contact,.contact-links a,.contact-links #copy-email{display:inline-flex;align-items:center;gap:10px}
 .method-steps > div > .lucide-icon{display:block;width:24px;height:24px;margin-bottom:22px;color:#c5cba9}
+
+/* Balance the portrait and biography across the full section width. */
+section.about{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(40px,6vw,96px);align-items:start}
+.about-copy>p{max-width:none}
+@media(max-width:760px){section.about{grid-template-columns:minmax(0,1fr);gap:35px}}
