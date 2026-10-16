@@ -108,3 +108,27 @@ section.notes{background:#e6e8e1}
 section.contact{background:var(--red)}
 footer{background:#f4f1e9}
 @media(max-width:760px){section.work{padding-top:60px}}
+
+/* Separate content through space and surfaces rather than repeated rules. */
+.header,.client-strip,.filters,.work-footer,.method-steps>div,.about-details,.notes,.note-grid>article,.projenius,.community,.community-list article,.resource,.contact-links,.dialog-top,.dialog-bottom,.case-facts{border:0}
+.header .nav-contact{border-bottom:0!important}
+.work .work-footer{padding-top:8px;margin-top:36px}
+.filters{gap:8px;margin-bottom:32px;flex-wrap:wrap}
+.filters button{border:0;margin:0;padding:10px 16px;border-radius:6px;min-height:42px}
+.filters button.active{background:var(--ink);color:var(--paper)}
+.filters button:not(.active):hover{background:#e9e6de}
+.work-grid{gap:42px 30px}.work-thumbnail,.event-cover{border-radius:8px}
+.method-steps{gap:32px}.method-steps>div{padding-top:0}
+.about-details{background:#eae7de;border-radius:8px;padding:24px;margin-top:30px}
+.note-grid{gap:20px}.note-grid>article{padding:28px;background:#f5f3ed;border-radius:8px}
+.note-grid h3{margin-top:0}.note-grid p{max-width:none}
+.community-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.community-list article{display:block;padding:28px;background:#edeae2;border-radius:8px}
+.community-list article>p{margin-top:20px}.community-list .community-role{margin-top:6px}
+.contact-links{padding-top:8px}
+.dialog-top,.dialog-bottom{background:#eae7de}
+.case-facts{padding:20px;background:#eae7de;border-radius:6px}
+.text-link,.event-read{border:0;text-decoration:underline;text-underline-offset:6px;text-decoration-color:#999b8e;text-decoration-thickness:1px}
+.text-link:after,.event-read:after{display:none}
+@media(max-width:760px){.work-grid{gap:32px}.filters{gap:6px}.filters button{padding:10px 12px}.community-list{grid-template-columns:minmax(0,1fr);gap:16px}.community-list article,.note-grid>article{padding:24px}.note-grid{gap:16px}.about-details{padding:20px}.method-steps{gap:30px 24px}}
+.note-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.note-grid>article{min-width:0}.note-grid h3{overflow-wrap:break-word}@media(max-width:760px){.note-grid{grid-template-columns:minmax(0,1fr)}.note-grid h3{font-size:28px}}
