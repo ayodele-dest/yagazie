@@ -16,13 +16,12 @@
       introPlayed = true;
       gsap.timeline({defaults})
         .from('.header .wordmark, .header nav a', {y: -12, opacity: 0, stagger: .055, duration: .55})
-        .from('.hero .eyebrow', {y: 10, opacity: 0, duration: .5}, .12)
         .from('.hero-line-inner', {yPercent: 108, stagger: .12, duration: 1.05}, .18)
         .from('.portrait', {clipPath: 'inset(0 0 100% 0)', duration: 1.15, ease: 'power3.inOut', clearProps: 'clipPath'}, .15)
         .from('.portrait img', {scale: 1.075, duration: 1.4, clearProps: 'transform'}, .15)
         .from('.asterisk', {scale: .6, rotation: -80, opacity: 0, duration: .9}, .52)
-        .from('.hero-bottom > *, .hero-foot', {y: 18, opacity: 0, stagger: .1}, .64)
-        .from('.portrait-note, .portrait figcaption', {y: 16, opacity: 0, stagger: .1}, .9);
+        .from('.hero-bottom > *', {y: 18, opacity: 0, stagger: .1}, .64)
+        .from('.portrait-note', {y: 16, opacity: 0, stagger: .1}, .9);
     }
 
     // Start each entrance at its own viewport boundary; native scrolling stays intact.
@@ -40,7 +39,7 @@
     });
     const cardReveals = [...document.querySelectorAll('.work-grid .project')].map(card => reveal(card, card, 0));
     document.querySelectorAll('.method-steps > div, .note-grid > article, .events-grid > article').forEach(item => reveal(item, item, 0));
-    reveal('.about-photo, .about-location', '.about-photo', .12);
+    reveal('.about-photo', '.about-photo', .12);
     reveal('.contact-links > *', '.contact-links', .07);
 
     gsap.fromTo('.reading-progress', {scaleX: 0}, {scaleX: 1, ease: 'none',

@@ -64,3 +64,6 @@ em,i{font-style:normal}
 .tone-sleep{background:#dfe2d5}.tone-clay{background:#e9d9d2}.tone-sand{background:#e9e2d5}.tone-blue{background:#dce3e9}.tone-stone{background:#e3e0da}.tone-sage{background:#dce1da}
 .work .work-footer{justify-content:flex-end}.work-grid .project-open>p{margin-bottom:0}
 @media(max-width:760px){.work-thumbnail{aspect-ratio:3/2;padding:22px}.work-thumbnail>span{font-size:clamp(22px,6vw,28px);letter-spacing:-.6px}.work-grid{row-gap:32px}}
+
+/* Simplified hierarchy without decorative eyebrow labels or counters. */
+.intro{grid-template-columns:minmax(0,1fr)}.intro>div{width:100%;max-width:800px;margin-inline:auto}.section-heading h2{margin-top:0}.about-photo{margin-top:0}.method-top{margin-top:0}.method-steps h3{margin-top:0}.note-grid h3{margin-top:0}.contact h2{margin-top:0}.dialog-top{justify-content:flex-end}.client-strip{justify-content:space-between}#case-title{margin-top:0}@media(max-width:760px){.about-photo{margin-top:0}.client-strip{justify-content:flex-start}}
