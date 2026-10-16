@@ -94,3 +94,17 @@ body{font-weight:400}h1,h2,h3,h1 em,h2 em,h3 em,.project-meta h3,.method-steps h
 .community{border-top:1px solid var(--line)}.community-list{margin-top:34px}.community-list article{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:48px;padding:28px 0;border-top:1px solid var(--line);align-items:start}.community-list h3{font-size:20px;font-weight:500;letter-spacing:-.5px}.community-list .community-role{font-size:13px;margin-top:6px;color:var(--muted)}.community-list article>p{font-size:15px;line-height:1.75;max-width:550px;color:var(--muted)}.community>.text-link{margin-top:24px}@media(max-width:760px){.community-list article{grid-template-columns:minmax(0,1fr);gap:12px;padding:23px 0}.community-list h3{font-size:18px}.community-list article>p{font-size:14px}}
 
 .resource{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.3fr);align-items:center;gap:clamp(40px,7vw,110px);border-top:1px solid var(--line)}.resource-cover{max-width:340px;width:100%;justify-self:center}.resource-cover img{display:block;width:100%;height:auto}.resource-copy{min-width:0}.resource-copy h2{margin-bottom:24px}.resource-copy>p{font-size:15px;line-height:1.8;color:var(--muted);max-width:620px}.resource-copy>.resource-lead{font-size:19px;line-height:1.6;color:var(--ink);margin-bottom:18px}.resource-copy ul{padding-left:20px;margin:23px 0;color:var(--muted);font-size:14px;line-height:1.8}.resource-copy li{padding-left:4px;margin-bottom:7px}.resource-copy>.resource-format{font-size:13px;margin-bottom:24px}@media(max-width:760px){.resource{grid-template-columns:minmax(0,1fr);gap:35px}.resource-cover{max-width:280px;justify-self:start}.resource-copy>.resource-lead{font-size:17px}.resource-copy>p{font-size:14px}}
+
+/* Gentle changes of surface mark each chapter of the portfolio. */
+.hero{background:#f4f1e9}
+section.intro{background:#e9e6de}
+section.work{background:#f7f4ed;padding-top:72px}
+section.method{background:#292d25}
+section.about{background:#f4f1e9}
+section.projenius{background:#e5e8dc}
+section.resource{background:#eee5db}
+section.community{background:#f7f4ed}
+section.notes{background:#e6e8e1}
+section.contact{background:var(--red)}
+footer{background:#f4f1e9}
+@media(max-width:760px){section.work{padding-top:60px}}
