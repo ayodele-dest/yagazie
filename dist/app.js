@@ -18,3 +18,12 @@ dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoun
 document.querySelector('#next-case').addEventListener('click',()=>{const keys=Object.keys(cases);renderCase(keys[(keys.indexOf(currentCase)+1)%keys.length]);document.querySelector('#close-dialog').focus({preventScroll:true});});
 document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('[data-filter]').forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',String(b===button));});document.querySelectorAll('.project').forEach(p=>p.hidden=button.dataset.filter!=='all'&&!p.dataset.category.split(' ').includes(button.dataset.filter));}));
 document.querySelector('#copy-email').addEventListener('click',async()=>{const status=document.querySelector('#copy-status');try{await navigator.clipboard.writeText('yagazieemole@gmail.com');status.textContent='Email address copied.';}catch{status.textContent='Email: yagazieemole@gmail.com';}});
+
+// Pause ambient movement outside the viewport, in background tabs, or on request.
+const clientStrip=document.querySelector('.client-strip');
+const clientPause=document.querySelector('.client-pause');
+let clientsVisible=false;
+const updateClientMotion=()=>clientStrip.classList.toggle('is-idle',!clientsVisible||document.hidden);
+new IntersectionObserver(entries=>{clientsVisible=entries[0].isIntersecting;updateClientMotion();}).observe(clientStrip);
+document.addEventListener('visibilitychange',updateClientMotion);
+clientPause.addEventListener('click',()=>{const paused=clientStrip.classList.toggle('is-paused');clientPause.textContent=paused?'Resume':'Pause';clientPause.setAttribute('aria-pressed',String(paused));clientPause.setAttribute('aria-label',(paused?'Resume':'Pause')+' scrolling brand names');});

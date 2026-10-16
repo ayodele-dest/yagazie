@@ -32,7 +32,7 @@
         scrollTrigger: {trigger, start: 'top 92%', once: true},
         onComplete: () => gsap.set(elements, {clearProps: 'transform,opacity'})});
     };
-    reveal('.client-strip > *', '.client-strip', .055);
+
     document.querySelectorAll('main > section:not(.hero)').forEach(section => {
       const heading = section.querySelector('h2');
       if (heading) reveal(heading, heading, 0);
