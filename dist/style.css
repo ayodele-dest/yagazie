@@ -67,3 +67,11 @@ em,i{font-style:normal}
 
 /* Simplified hierarchy without decorative eyebrow labels or counters. */
 .intro{grid-template-columns:minmax(0,1fr)}.intro>div{width:100%;max-width:800px;margin-inline:auto}.section-heading h2{margin-top:0}.about-photo{margin-top:0}.method-top{margin-top:0}.method-steps h3{margin-top:0}.note-grid h3{margin-top:0}.contact h2{margin-top:0}.dialog-top{justify-content:flex-end}.client-strip{justify-content:space-between}#case-title{margin-top:0}@media(max-width:760px){.about-photo{margin-top:0}.client-strip{justify-content:flex-start}}
+
+/* Give the point-of-view section a deliberate desktop composition. */
+section.intro{padding-block:clamp(64px,7vw,112px)}
+section.intro>div{max-width:none;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);column-gap:clamp(40px,6vw,100px);align-items:center}
+section.intro h2{font-size:clamp(34px,3.25vw,52px);line-height:1.18;letter-spacing:-1.8px}
+section.intro p{margin-top:0;max-width:490px;font-size:16px;line-height:1.85}
+@media(max-width:1000px){section.intro>div{grid-template-columns:minmax(0,1fr);gap:24px;max-width:720px;margin-inline:0}section.intro p{max-width:620px}section.intro h2{font-size:clamp(32px,4.3vw,40px)}}
+@media(max-width:760px){section.intro{padding-block:60px}section.intro h2{font-size:clamp(28px,7.7vw,38px);letter-spacing:-1.2px}section.intro p{font-size:15px;line-height:1.75}}
