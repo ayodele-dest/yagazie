@@ -57,3 +57,10 @@ em,i{font-style:normal}
  .events-grid .project-meta h3{font-size:16px}
 }
 @media(max-width:760px){.aiesec-title,.tony-title{font-size:clamp(29px,13.5cqw,48px)}.places{margin-top:22px}.tony-flow{margin-top:26px}.research-title{font-size:clamp(32px,15.5cqw,48px)}}
+
+/* Quiet project thumbnails: one name, one background. */
+.work-thumbnail{width:100%;aspect-ratio:16/9;display:grid;place-items:center;padding:28px;text-align:center;background:#e5e5dc;color:#35382f;transition:background-color .25s}
+.work-thumbnail>span{font-family:var(--sans);font-size:clamp(24px,2.4vw,34px);font-weight:500;line-height:1.35;letter-spacing:-.9px;max-width:100%;overflow-wrap:break-word}
+.tone-sleep{background:#dfe2d5}.tone-clay{background:#e9d9d2}.tone-sand{background:#e9e2d5}.tone-blue{background:#dce3e9}.tone-stone{background:#e3e0da}.tone-sage{background:#dce1da}
+.work .work-footer{justify-content:flex-end}.work-grid .project-open>p{margin-bottom:0}
+@media(max-width:760px){.work-thumbnail{aspect-ratio:3/2;padding:22px}.work-thumbnail>span{font-size:clamp(22px,6vw,28px);letter-spacing:-.6px}.work-grid{row-gap:32px}}
