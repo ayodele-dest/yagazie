@@ -21,9 +21,7 @@ document.querySelector('#copy-email').addEventListener('click',async()=>{const s
 
 // Pause ambient movement outside the viewport, in background tabs, or on request.
 const clientStrip=document.querySelector('.client-strip');
-const clientPause=document.querySelector('.client-pause');
 let clientsVisible=false;
 const updateClientMotion=()=>clientStrip.classList.toggle('is-idle',!clientsVisible||document.hidden);
 new IntersectionObserver(entries=>{clientsVisible=entries[0].isIntersecting;updateClientMotion();}).observe(clientStrip);
 document.addEventListener('visibilitychange',updateClientMotion);
-clientPause.addEventListener('click',()=>{const paused=clientStrip.classList.toggle('is-paused');clientPause.textContent=paused?'Resume':'Pause';clientPause.setAttribute('aria-pressed',String(paused));clientPause.setAttribute('aria-label',(paused?'Resume':'Pause')+' scrolling brand names');});
